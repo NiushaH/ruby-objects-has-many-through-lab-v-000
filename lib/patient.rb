@@ -25,7 +25,8 @@ class Patient
 
   # iterates over that patient's Appointments and collects the doctor that belongs to each Appointment
   def doctors
-    
+    Appointment.map {|appointment| appointment.doctor}
+
     self.appointments.collect {|appt| appt.doctors}
   end 
 
