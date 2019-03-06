@@ -20,7 +20,7 @@ class Patient
 
   # iterates through the Appointments array and returns Appointments that belong to the patient
   def appointments
-    Appointment.select {|appointment| appointment.patient}
+    Appointment.all.select { |appointment| appointment.patient == self }
   end
 
   # iterates over that patient's Appointments and collects the doctor that belongs to each Appointment
