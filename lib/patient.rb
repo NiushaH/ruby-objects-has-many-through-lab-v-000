@@ -20,7 +20,6 @@ class Patient
 
   # iterates through the Appointments array and returns Appointments that belong to the patient
   def appointments
-    binding.pry
     Appointment.all.select {|appt| appt.date == self}
   end
 
